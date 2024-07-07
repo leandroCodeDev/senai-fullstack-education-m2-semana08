@@ -2,11 +2,69 @@ header {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 20px;
+  padding: 0px;
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  img {
-    width: 100%;
-    max-width: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+  padding-left: 50px;
+  padding-right: 50px;
+
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+    img {
+      height: 40px;
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+
+      &:hover .dropdown-content {
+        display: block;
+      }
+    }
   }
 }
+

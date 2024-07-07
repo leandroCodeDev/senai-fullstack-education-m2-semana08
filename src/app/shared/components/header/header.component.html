@@ -1,3 +1,12 @@
 <header>
-  <img src="../../../../assets/logo-educatech-horizontal.svg" alt="EducaTech" />
+  <div class="logo">
+    <img src="../../../../assets/logo-educatech-horizontal.svg" alt="EducaTech" />
+  </div>
+    <div class="user-info">
+        <span id="username"> {{user.nome}}</span>
+        <div class="dropdown">
+            <img src="https://via.placeholder.com/40" alt="Avatar">
+        </div>
+    </div>
 </header>
+<app-sidebar *ngIf="showSideBar" [admin]="user.admin"></app-sidebar>
