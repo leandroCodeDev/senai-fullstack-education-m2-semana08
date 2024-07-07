@@ -1,0 +1,47 @@
+form {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  label {
+    margin-right: 16px;
+  }
+  input {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 6px;
+    margin-right: 16px;
+    font-size: 16px;
+    color: #f70063;
+  }
+  button {
+    padding: 8px 32px;
+  }
+}
+table {
+  width: 100%;
+  thead {
+    background-color: #6a3ec4;
+    color: #fff;
+    th {
+      font-weight: 600;
+      font-size: 20px;
+      padding: 6px;
+      border-radius: 6px;
+    }
+  }
+  tbody {
+    tr {
+      td {
+        padding: 6px 16px;
+        background: #fff;
+        border-radius: 6px;
+        button {
+          padding: 6px;
+          font-size: 12px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

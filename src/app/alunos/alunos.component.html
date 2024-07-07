@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="app">
+  <form [formGroup]="formPesquisa" (ngSubmit)="pesquisar()">
+    <div>
+      <label for="pesquisar">Pesquisar:</label>
+      <input
+        type="text"
+        id="pesquisar"
+        name="pesquisar"
+        formControlName="pesquisar"
+        placeholder="Buscar por nome ou email"
+      />
+    </div>
+    <div class="botoes">
+      <button type="submit" [disabled]="!formPesquisa.valid">Pesquisar</button>
+    </div>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>E-mail</th>
+        <th>Curso</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Aluno</td>
+        <td>000.000.000-00</td>
+        <td>aluno&#64;email.com</td>
+        <td>Fullstack</td>
+        <td>
+          <button type="button" [routerLink]="['/cadastro-aluno']">
+            Editar
+          </button>
+          <button type="button" (click)="excluir()">Excluir</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Aluno</td>
+        <td>000.000.000-00</td>
+        <td>aluno&#64;email.com</td>
+        <td>Fullstack</td>
+        <td>
+          <button type="button" [routerLink]="['/cadastro-aluno']">
+            Editar
+          </button>
+          <button type="button" (click)="excluir()">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

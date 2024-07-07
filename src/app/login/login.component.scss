@@ -1,0 +1,41 @@
+form {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 48px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 48px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+    input {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      color: #6a3ec4;
+    }
+    span {
+      font-size: 12px;
+      display: block;
+      font-style: italic;
+      color: #f70063;
+    }
+  }
+  .botoes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+}
