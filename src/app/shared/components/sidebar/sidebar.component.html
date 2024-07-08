@@ -1,15 +1,15 @@
 <div class="sidebar">
   <div>
-    <button [routerLink]="['disciplinas']">Disciplinas</button>
+    <button [routerLink]="['/disciplinas']">Disciplinas</button>
     <button>Atividades Avaliativas</button>
     <button>Solicitações</button>
     <button>Biblioteca Online</button>
     <button *ngIf="admin">Usuários</button>
   </div>
   <div>
-    <button>Logout</button>
+    <button (click)="sair()">Logout</button>
   </div>
 </div>
-<div class="outSidebar">
-  <button class="sair">X</button>
+<div class="outSidebar" (click)="fechar()">
+  <button class="sair" (click)="fechar()">X</button>
 </div>

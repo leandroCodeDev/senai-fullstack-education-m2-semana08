@@ -6,7 +6,8 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { AutenticarService } from '../shared/services/autenticar/autenticar.service';
 
 @Component({
   selector: 'app-login',
@@ -21,11 +22,34 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.formLogin = new FormGroup({
       email: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      senha: new FormControl('', Validators.required),
     });
   }
 
-  entrar() {}
+  constructor(private AutenticarService: AutenticarService, private router: Router) {}
+
+  entrar() {
+    let login = {
+      email: '',
+      senha: ''
+    };
+
+    login = this.formLogin.value
+
+    if(login.email && login.senha) {
+      let retorno = this.AutenticarService.login(login);
+      if(retorno){
+        window.alert('Usuario logado');
+        setTimeout(() => {
+          this.router.navigate(['/home']);
+        }, 500);
+      }else{
+        window.alert('Usuario/senha incorrero');
+      }
+    } else {
+      window.alert('Por favor, preencha os campos');
+    }
+  }
 
   cadastrar() {
     window.alert(

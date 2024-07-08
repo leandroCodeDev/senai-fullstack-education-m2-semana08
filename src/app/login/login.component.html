@@ -10,23 +10,23 @@
       >
     </div>
     <div>
-      <label for="password">Senha:</label>
+      <label for="senha">Senha:</label>
       <input
         type="password"
-        id="password"
-        name="password"
-        formControlName="password"
+        id="senha"
+        name="senha"
+        formControlName="senha"
       />
       <span
-        *ngIf="(formLogin.controls['password'].touched || formLogin.controls['password'].dirty) && formLogin.controls['password'].errors?.['required']"
+        *ngIf="(formLogin.controls['senha'].touched || formLogin.controls['senha'].dirty) && formLogin.controls['senha'].errors?.['required']"
         >Senha obrigatória</span
       >
     </div>
     <div class="botoes">
       <button type="button" (click)="cadastrar()">Cadastrar</button>
       <button
+        (click)="entrar()"
         type="submit"
-        [routerLink]="['/home']"
         [disabled]="!formLogin.valid"
       >
         Entrar

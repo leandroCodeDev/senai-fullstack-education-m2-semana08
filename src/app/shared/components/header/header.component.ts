@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
+import { AutenticarService } from '../../services/autenticar/autenticar.service';
 
 interface User{
   nome:String,
@@ -16,4 +17,19 @@ interface User{
 export class HeaderComponent {
   @Input() user:User = {nome:"lorem",admin:false}
   showSideBar = false
+
+constructor(private AutenticarService:AutenticarService){}
+
+  ngOnInit(){
+    let usuariologado = this.AutenticarService.getCredenciais()
+    this.user.nome = usuariologado.nome
+    this.user.admin = usuariologado.admin
+    
+  }
+  callSidebar(){
+    this.showSideBar = true
+  }
+  closeSidebar(){
+    this.showSideBar = false
+  }
 }

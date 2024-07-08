@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component,Input, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { AutenticarService } from '../../services/autenticar/autenticar.service';
 @Component({
   selector: 'app-sidebar',
   standalone: true,
@@ -9,12 +10,23 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
+  @Output() closeSidebar = new EventEmitter();
   @Input() admin=false
   
-  constructor(){}
+  constructor(private AutenticarService: AutenticarService, private router: Router) {}
 
   ngOnInit(){
 
+  }
+
+  fechar(){
+    this.closeSidebar.emit()
+  }
+  sair(){
+    setTimeout(() => {
+      this.AutenticarService.logout()
+      this.router.navigate(['/login']);
+    }, 500);
   }
 
 
