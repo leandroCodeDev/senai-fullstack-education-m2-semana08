@@ -10,6 +10,7 @@ import { Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { UsuariosService } from '../shared/services/usuarios/usuarios.service';
 import { UsuarioInterface } from '../shared/interfaces/usuario.interface';
+import { CursoInterface } from '../shared/interfaces/curso.interface';
 
 @Component({
   selector: 'app-alunos',
@@ -22,6 +23,7 @@ export class AlunosComponent implements OnInit {
   formPesquisa!: FormGroup;
   usuarios: Array<UsuarioInterface> = [];
   usuariosPesquisa: Array<UsuarioInterface> = [];
+  curso!:CursoInterface
 
 constructor(
   private usuarioService:UsuariosService,

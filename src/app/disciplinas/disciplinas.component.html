@@ -1,46 +1,21 @@
 <app-header></app-header>
 
 <div class="app">
-  <p><strong>Aluno(a):</strong> Scheila Stihler</p>
-  <h2>Curso Fullstack - Grade Curricular</h2>
+  <p><strong>Aluno(a):</strong> {{user.nome}}</p>
+  <h2>Curso {{curso.nome}} - Grade Curricular</h2>
 
   <div class="grade-semestres">
-    <div class="semestre">
-      <h3 class="titulo">
-        <span>1</span>
-        semestre
-      </h3>
-      <ul class="disciplinas">
-        <li>Lógica de Programação</li>
-        <li>Java</li>
-        <li>Banco de Dados</li>
-        <li>Git e Github</li>
-      </ul>
-    </div>
 
-    <div class="semestre">
-      <h3 class="titulo">
-        <span>2</span>
-        semestre
-      </h3>
-      <ul class="disciplinas">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>Angular</li>
-      </ul>
-    </div>
-
-    <div class="semestre">
-      <h3 class="titulo">
-        <span>3</span>
-        semestre
-      </h3>
-      <ul class="disciplinas">
-        <li>Integração Backend e Frontend</li>
-        <li>Testes</li>
-        <li>Deploy</li>
-      </ul>
+    <div *ngFor="let semestre of semestres">      
+      <div  class="semestre">
+        <h3 class="titulo">
+          <span>{{semestre}}</span>
+          semestre
+        </h3>
+        <ul class="disciplinas">
+          <li *ngFor="let disciplina of disciplinasSemestre[semestre]">{{disciplina.nome}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

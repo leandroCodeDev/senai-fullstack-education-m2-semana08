@@ -15,4 +15,8 @@ export class CursosService {
     return this.httpClient.get<Array<CursoInterface>>(this.url);
   }
 
+  getCurso(id:string) {
+    return this.httpClient.get<CursoInterface>(this.url+`/${id}`);
+  }
+
 }
