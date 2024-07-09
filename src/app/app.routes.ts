@@ -15,12 +15,22 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'alunos',
-    component: AlunosComponent,
+    path: 'cadastrar',
+    component: CadastroAlunoComponent
   },
+
   {
-    path: 'cadastro-aluno',
-    component: CadastroAlunoComponent,
+    path: 'alunos',
+    children: [
+      {
+        path: '',
+        component: AlunosComponent
+      },
+      {
+        path: ':id/editar',
+        component: CadastroAlunoComponent
+      }
+    ]
   },
   {
     path: 'disciplinas',

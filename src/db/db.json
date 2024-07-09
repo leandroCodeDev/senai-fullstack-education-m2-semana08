@@ -1,59 +1,64 @@
 {
-    "usuarios": [
-      {
-        "id": "1",
-        "senha":"123456",
-        "nome": "Eduardo Silva",
-        "cpf": "12345678909",
-        "email": "mail@mail.com",
-        "celular": "15959595959",
-        "admin":true
-      },
-      {
-        "id": "55",
-        "senha":"123456",
-        "nome": "Leandro",
-        "cpf": "123456",
-        "email": "leandrodsdias@hotmail.com",
-        "celular": "15959595959",
-        "admin":true
-      },
-      {
-        "id": "2",
-        "senha":"123456",
-        "nome": "André Silva",
-        "cpf": "42756456452",
-        "email": "teste@mail.com",
-        "celular": "158686868686",
-        "admin":true
-      },
-      {
-        "id": "3",
-        "senha":"123456",
-        "nome": "Luis Silva",
-        "cpf": "98765432105",
-        "email": "teste@teste.com",
-        "celular": "157676767676",
-        "admin":false
-      },
-      {
-        "id": "573a",
-        "senha":"123456",
-        "nome": "Nome Completo",
-        "cpf": "12387945685",
-        "email": "email@mail.com",
-        "celular": "15949494949",
-        "admin":false
-      },
-      {
-        "nome": "José Silva",
-        "senha":"123456",
-        "cpf": "4567893154",
-        "email": "email@mail.com",
-        "celular": "15949494949",
-        "id": "11fb",
-        "admin":false
-      }
-    ],
-    "disciplinas":[]
-  }
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Eduardo Silva",
+      "cpf": "12345678909",
+      "email": "mail@mail.com",
+      "celular": "15959595959",
+      "curso": "1"
+    },
+    {
+      "id": "55",
+      "senha": "123456",
+      "nome": "Leandro",
+      "cpf": "123456",
+      "email": "leandrodsdias@hotmail.com",
+      "curso": "1",
+      "celular": "15959595959",
+      "admin": true
+    },
+    {
+      "id": "2",
+      "senha": "123456",
+      "nome": "André Silva",
+      "cpf": "42756456452",
+      "email": "teste@mail.com",
+      "celular": "158686868686",
+      "curso": "2",
+      "admin": true
+    },
+    {
+      "id": "3",
+      "senha": "123456",
+      "nome": "Luis Silva",
+      "cpf": "98765432105",
+      "email": "teste@teste.com",
+      "celular": "157676767676",
+      "curso": "2",
+      "admin": false
+    },
+    {
+      "id": "573a",
+      "senha": "123456",
+      "nome": "Nome Completo",
+      "cpf": "12387945685",
+      "email": "email@mail.com",
+      "celular": "15949494949",
+      "curso": "2",
+      "admin": false
+    },
+    {
+      "nome": "José Silva",
+      "senha": "123456",
+      "cpf": "4567893154",
+      "email": "email@mail.com",
+      "celular": "15949494949",
+      "curso": "3",
+      "id": "11fb",
+      "admin": false
+    }
+  ],
+  "disciplinas": [],
+  "cursos": []
+}

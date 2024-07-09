@@ -1,5 +1,5 @@
 export interface UsuarioInterface {
-    id: string|null,
+    id: string,
     senha: string|null,
     nome: string|null,
     cpf: string|null,

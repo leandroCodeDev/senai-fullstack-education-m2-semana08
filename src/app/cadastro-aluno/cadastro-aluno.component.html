@@ -1,12 +1,17 @@
 <app-header></app-header>
 
 <div class="app">
-  <form [formGroup]="formCadastro" (ngSubmit)="salvar()">
+  <form [formGroup]="formCadastro" (ngSubmit)="submitForm()">
+
+   <div style="display:none;">
+    <input type="text" id="id" name="id" formControlName="id" />
+  </div>
+
     <div>
       <label for="nome">Nome Completo:</label>
-      <input type="text" id="nome" name="nome" formControlName="nomeCompleto" />
+      <input type="text" id="nome" name="nome" formControlName="nome" />
       <span
-        *ngIf="(formCadastro.controls['nomeCompleto'].touched || formCadastro.controls['nomeCompleto'].dirty) && formCadastro.controls['nomeCompleto'].errors?.['required']"
+        *ngIf="(formCadastro.controls['nome'].touched || formCadastro.controls['nome'].dirty) && formCadastro.controls['nome'].errors?.['required']"
         >Nome Completo obrigatório</span
       >
     </div>
@@ -50,10 +55,9 @@
     <div class="botoes">
       <button
         type="submit"
-        [routerLink]="['/alunos']"
         [disabled]="!formCadastro.valid"
       >
-        Salvar
+      {{ idUsuario ? 'Editar' : 'Cadastrar' }}
       </button>
     </div>
   </form>

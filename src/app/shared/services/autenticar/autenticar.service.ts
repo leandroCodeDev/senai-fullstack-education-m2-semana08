@@ -25,8 +25,7 @@ export class AutenticarService {
       return true;
     }else{
       return false;
-    }
-        
+    }     
     
   }
 

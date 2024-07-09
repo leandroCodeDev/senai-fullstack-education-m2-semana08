@@ -13,7 +13,7 @@
       />
     </div>
     <div class="botoes">
-      <button type="submit" [disabled]="!formPesquisa.valid">Pesquisar</button>
+      <button type="submit" >Pesquisar</button>
     </div>
   </form>
 
@@ -28,28 +28,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Aluno</td>
-        <td>000.000.000-00</td>
-        <td>aluno&#64;email.com</td>
-        <td>Fullstack</td>
+      <tr *ngFor="let usuario of usuariosPesquisa">
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.cpf}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.nome}}</td>
         <td>
-          <button type="button" [routerLink]="['/cadastro-aluno']">
+          <button type="button" (click)="editar(usuario.id)">
             Editar
           </button>
-          <button type="button" (click)="excluir()">Excluir</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Aluno</td>
-        <td>000.000.000-00</td>
-        <td>aluno&#64;email.com</td>
-        <td>Fullstack</td>
-        <td>
-          <button type="button" [routerLink]="['/cadastro-aluno']">
-            Editar
-          </button>
-          <button type="button" (click)="excluir()">Excluir</button>
+          <button type="button" (click)="excluir(usuario.id)">Excluir</button>
         </td>
       </tr>
     </tbody>
