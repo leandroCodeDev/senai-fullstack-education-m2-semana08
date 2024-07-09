@@ -6,7 +6,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { UsuariosService } from '../shared/services/usuarios/usuarios.service';
 import { UsuarioInterface } from '../shared/interfaces/usuario.interface';
@@ -23,7 +23,8 @@ export class CadastroAlunoComponent implements OnInit {
   idUsuario: string | undefined;
   constructor(
     private activatedRoute: ActivatedRoute,
-    private usuarioService: UsuariosService
+    private usuarioService: UsuariosService,
+    private router: Router,
   ){}
   ngOnInit(): void {
     this.idUsuario = this.activatedRoute.snapshot.params['id'];
@@ -31,12 +32,12 @@ export class CadastroAlunoComponent implements OnInit {
     console.log(this.idUsuario)
 
     this.formCadastro = new FormGroup({
-      id: new FormControl(''),
       nome: new FormControl('', Validators.required),
       cpf: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       celular: new FormControl('', Validators.required),
       curso: new FormControl('', Validators.required),
+      admin: new FormControl(false),
     });
     if (this.idUsuario) {
       this.usuarioService.getUsuario(this.idUsuario).subscribe((retorno) => {
@@ -56,6 +57,7 @@ export class CadastroAlunoComponent implements OnInit {
       } else {
         this.cadastrar(this.formCadastro.value);
       }
+      this.router.navigate(['/alunos']);
     } else {
       this.formCadastro.markAllAsTouched();
     }

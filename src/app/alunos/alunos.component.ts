@@ -60,7 +60,9 @@ constructor(
   }
 
   excluir(id:string) {
-    this.usuarioService.delete(id)
-    this.router.navigate(['/alunos']);
+    this.usuarioService.delete(id).subscribe(() =>{
+      window.location.reload();
+    })
+    
   }
 }
