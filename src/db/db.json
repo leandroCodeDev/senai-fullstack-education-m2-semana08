@@ -59,6 +59,87 @@
       "admin": false
     }
   ],
-  "disciplinas": [],
-  "cursos": []
+  "disciplinas": [
+    {
+      "id":"1",
+      "nome":"Lógica de Programação",
+      "semestre":"1",
+      "disciplina":"1"
+    },
+    {
+      "id":"2",
+      "nome":"Java",
+      "semestre":"1",
+      "disciplina":"1"
+    },
+    {
+      "id":"3",
+      "nome":"Banco de Dados",
+      "semestre":"1",
+      "disciplina":"1"
+    },
+    {
+      "id":"4",
+      "nome":"Git e Github",
+      "semestre":"1",
+      "disciplina":"1"
+    },
+    {
+      "id":"5",
+      "nome":"HTML",
+      "semestre":"2",
+      "disciplina":"1"
+    },
+    {
+      "id":"6",
+      "nome":"CSS",
+      "semestre":"2",
+      "disciplina":"1"
+    },
+    {
+      "id":"7",
+      "nome":"Javascript",
+      "semestre":"2",
+      "disciplina":"1"
+    },
+    {
+      "id":"8",
+      "nome":"Angular",
+      "semestre":"2",
+      "disciplina":"1"
+    },
+    {
+      "id":"9",
+      "nome":"Integração Backend e Frontend",
+      "semestre":"3",
+      "disciplina":"1"
+    },
+    {
+      "id":"10",
+      "nome":"Testes",
+      "semestre":"3",
+      "disciplina":"1"
+    },
+    {
+      "id":"11",
+      "nome":"Deploy",
+      "semestre":"3",
+      "disciplina":"1"
+    }
+  ],
+  "cursos": [
+    {
+      "id":"1",
+      "nome":"Backend"
+    },
+    {
+      "id":"2",
+      "nome":"Frontend"
+    },
+    {
+      "id":"3",
+      "nome":"Fullstack"
+    }
+  ]
+
 }
